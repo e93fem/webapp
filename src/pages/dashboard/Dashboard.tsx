@@ -1,12 +1,12 @@
-import ExpenceList from "../../components/ExpenceList"
+import ExpenseList from "../../components/ExpenseList"
 import useExpenses from "../../hooks/useExpenses"
 
 const Dashboard = () => {
     const {expenses, error, isLoading} = useExpenses();
-    return <div>
+    return <div className="container">
             {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}
-        <ExpenceList expenses={expenses}/>
+        <ExpenseList expenses={expenses}/>
         </div>
 }
 
