@@ -29,7 +29,8 @@ const ExpenseList = ({expenses}: Props) => {
                 <span className="float-end">Amount</span>
             </h5>
             <div className="card-body">
-                {expenses.map((expense) =>                 <div>
+                {expenses.map((expense) => (                
+                <div key={expense.expenseId}>
                     <div className="d-flex justify-content-between border-bottom-1 p-3 text-dark">
                         <div className="card-title m-0">
                             <h5>{expense.name}</h5>
@@ -44,7 +45,7 @@ const ExpenseList = ({expenses}: Props) => {
                         </div>
                     </div>
                 </div>
-)}
+            ))}
             </div>
         </div>
 }
